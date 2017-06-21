@@ -1,5 +1,6 @@
 package se.umu.cs.android.thirty;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -7,12 +8,12 @@ import android.widget.ImageButton;
  * Created by dv15anm on 2017-06-21.
  */
 
-public class DiceOnClickListner implements View.OnClickListener {
+public class DiceOnClickListener implements View.OnClickListener {
 
     private GameHandler mGameHandler;
     private int mDieNr;
 
-    public DiceOnClickListner(GameHandler gameHandler, int dieNr) {
+    public DiceOnClickListener(GameHandler gameHandler, int dieNr) {
         mGameHandler = gameHandler;
         mDieNr = dieNr;
     }

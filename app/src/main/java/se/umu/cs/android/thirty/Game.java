@@ -1,7 +1,7 @@
 package se.umu.cs.android.thirty;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -46,13 +46,14 @@ public class Game extends AppCompatActivity {
         mDiceButtons.add((ImageButton) findViewById(R.id.die6_button));
 
         for(int i = 0; i < 6; i++) {
-            mDiceButtons.get(i).setOnClickListener(new DiceOnClickListner(mGameHandler, i));
+            mDiceButtons.get(i).setOnClickListener(new DiceOnClickListener(mGameHandler, i));
         }
     }
 
     private void updateDiceButtons() {
         for(int i = 0; i < 6; i++) {
-            mDiceButtons.get(i).setBackgroundResource(mGameHandler.getDieImage(i));
+            int dieImg =mGameHandler.getDieImage(i);
+            mDiceButtons.get(i).setBackgroundResource(dieImg);
         }
     }
 }

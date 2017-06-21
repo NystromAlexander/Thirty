@@ -1,5 +1,7 @@
 package se.umu.cs.android.thirty;
 
+import android.util.Log;
+
 import java.util.Random;
 
 /**
@@ -37,35 +39,17 @@ public class Dice {
     public int getImage() {
         switch (mCurrentValue) {
             case 1:
-                if (mIsSaved){
-                    return R.drawable.grey1;
-                }
-                return R.drawable.white1;
+                return mIsSaved ? R.drawable.grey1 : R.drawable.white1;
             case 2:
-                if (mIsSaved){
-                    return R.drawable.grey2;
-                }
-                return R.drawable.white2;
+                return mIsSaved ? R.drawable.grey2 : R.drawable.white2;
             case 3:
-                if (mIsSaved){
-                    return R.drawable.grey3;
-                }
-                return R.drawable.white3;
+                return mIsSaved ? R.drawable.grey3 : R.drawable.white3;
             case 4:
-                if (mIsSaved){
-                    return R.drawable.grey4;
-                }
-                return R.drawable.white4;
+                return mIsSaved ? R.drawable.grey4 : R.drawable.white4;
             case 5:
-                if (mIsSaved){
-                    return R.drawable.grey5;
-                }
-                return R.drawable.white5;
+                return mIsSaved ? R.drawable.grey5 : R.drawable.white5;
             case 6:
-                if (mIsSaved){
-                    return R.drawable.grey6;
-                }
-                return R.drawable.white6;
+                return mIsSaved ? R.drawable.grey6 : R.drawable.white6;
             default:
                 return 0;
         }

@@ -46,7 +46,9 @@ public class GameHandler {
     }
 
     public void setSavedDie(int dieNr) {
-        mDice.get(dieNr).setSaved();
+        if (mCurrentThrow != 0) { //Stops a player for saving dice before the first throw
+            mDice.get(dieNr).setSaved();
+        }
     }
 
     public int getDieImage(int dieNr) {
@@ -76,7 +78,7 @@ public class GameHandler {
     }
 
     public boolean setChosenOption(PointOptions option) {
-        if (mChosenOption == null) {
+        if (mChosenOption == null ) {
             mChosenOption = option;
             return true;
         } else {
