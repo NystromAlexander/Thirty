@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Thirty</string>
+    
+    <string name="points_low">Low</string>
+    <string name="points_four">Four (4)</string>
+    <string name="points_five">Five (5)</string>
+    <string name="points_six">Six (6)</string>
+    <string name="points_seven">Seven (7)</string>
+    <string name="points_eight">Eight (8)</string>
+    <string name="points_nine">Nine (9)</string>
+    <string name="points_ten">Ten (10)</string>
+    <string name="points_eleven">Eleven (11)</string>
+    <string name="points_twelve">Twelve (12)</string>
+    <string name="dice_roll">Throw</string>
+</resources>
