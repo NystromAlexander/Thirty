@@ -13,6 +13,7 @@ public class Game extends AppCompatActivity {
 
     private GameHandler mGameHandler;
     private List<ImageButton> mDiceButtons;
+    private List<Button> mPointButtons;
     private Button mThrowButton;
 
     @Override
@@ -22,7 +23,7 @@ public class Game extends AppCompatActivity {
 
         mGameHandler = new GameHandler();
         initializeDieList();
-
+        initializePointButtons();
         mThrowButton = (Button) findViewById(R.id.throw_button);
         mThrowButton.setOnClickListener(v -> {
             if(!mGameHandler.gotThrowsLeft()) {
@@ -55,5 +56,40 @@ public class Game extends AppCompatActivity {
             int dieImg =mGameHandler.getDieImage(i);
             mDiceButtons.get(i).setBackgroundResource(dieImg);
         }
+    }
+
+    private void initializePointButtons() {
+        mPointButtons = new ArrayList<>();
+        Button lowButton = (Button) findViewById(R.id.low_button);
+        lowButton.setOnClickListener(new ScoreOptionListener(PointOptions.LOW, mGameHandler));
+        mPointButtons.add(lowButton);
+        Button fourButton = (Button) findViewById(R.id.four_button);
+        fourButton.setOnClickListener(new ScoreOptionListener(PointOptions.FOUR, mGameHandler));
+        mPointButtons.add(fourButton);
+        Button fiveButton = (Button) findViewById(R.id.five_button);
+        fiveButton.setOnClickListener(new ScoreOptionListener(PointOptions.FIVE, mGameHandler));
+        mPointButtons.add(fiveButton);
+        Button sixButton = (Button) findViewById(R.id.six_button);
+        sixButton.setOnClickListener(new ScoreOptionListener(PointOptions.SIX, mGameHandler));
+        mPointButtons.add(sixButton);
+        Button sevenButton = (Button) findViewById(R.id.seven_button);
+        sevenButton.setOnClickListener(new ScoreOptionListener(PointOptions.SEVEN, mGameHandler));
+        mPointButtons.add(sevenButton);
+        Button eightButton = (Button) findViewById(R.id.eight_button);
+        eightButton.setOnClickListener(new ScoreOptionListener(PointOptions.EIGHT, mGameHandler));
+        mPointButtons.add(eightButton);
+        Button nineButton = (Button) findViewById(R.id.nine_button);
+        nineButton.setOnClickListener(new ScoreOptionListener(PointOptions.NINE, mGameHandler));
+        mPointButtons.add(nineButton);
+        Button tenButton = (Button) findViewById(R.id.ten_button);
+        tenButton.setOnClickListener(new ScoreOptionListener(PointOptions.TEN, mGameHandler));
+        mPointButtons.add(tenButton);
+        Button elevenButton = (Button) findViewById(R.id.eleven_button);
+        elevenButton.setOnClickListener(new ScoreOptionListener(PointOptions.ELEVEN, mGameHandler));
+        mPointButtons.add(elevenButton);
+        Button twelveButton = (Button) findViewById(R.id.twelve_button);
+        twelveButton.setOnClickListener(new ScoreOptionListener(PointOptions.TWELVE, mGameHandler));
+        mPointButtons.add(twelveButton);
+
     }
 }

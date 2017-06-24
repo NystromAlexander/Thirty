@@ -1,6 +1,7 @@
 package se.umu.cs.android.thirty;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 /**
@@ -19,7 +20,10 @@ public class ScoreOptionListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         mGameHandler.setChosenOption(mOption);
-
+        mGameHandler.endTurn(mOption);
+        Button pointButton = (Button) v;
+        pointButton.setClickable(false);
+        pointButton.setEnabled(false);
 
     }
 }

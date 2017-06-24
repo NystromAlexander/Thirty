@@ -1,5 +1,7 @@
 package se.umu.cs.android.thirty;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,12 +58,18 @@ public class GameHandler {
     }
 
     public void choseDie(int dieNr) {
-        mChosenDice.add(mDice.get(dieNr));
+        if(mDice.get(dieNr).isSaved()) {
+            mChosenDice.add(mDice.get(dieNr));
+            Log.d("GameHandler", "chosenDie was "+mDice.get(dieNr).getCurrentValue());
+        } else {
+            mChosenDice.remove(mDice.get(dieNr));
+        }
+
     }
 
-    public void removeDie(int dieNr) {
-        mChosenDice.remove(mDice.get(dieNr));
-    }
+//    public void removeDie(int dieNr) {
+//        mChosenDice.remove(mDice.get(dieNr));
+//    }
 
     public Map<PointOptions, Integer> getPoints() {
         return mPoints;
@@ -70,7 +78,9 @@ public class GameHandler {
     public void endTurn(PointOptions chosenOption) {
         calculatePoints(chosenOption);
         mCurrentTurn++;
-        mDice.forEach(Dice::setSaved);
+        mDice.forEach(dice -> {if (dice.isSaved())dice.setSaved();});
+        mCurrentThrow = 0;
+        mChosenDice.clear();
     }
 
     public boolean isGameFinished() {
@@ -93,9 +103,31 @@ public class GameHandler {
     }
 
     private void calculatePoints(PointOptions value) {
+        int points = 0;
+
         if (value == PointOptions.LOW) {
-            mPoints.put(value, calculateLow());
+            points = calculateLow();
+        } else {
+            List<Dice> diceCopy = new ArrayList<>(mChosenDice);
+            Log.d("GameHandler", "diceCopy size "+diceCopy.size());
+            Dice dieValue;
+            int diceComp = 0;
+            while (!diceCopy.isEmpty()) {
+                dieValue = diceCopy.remove(0);
+                diceComp += dieValue.getCurrentValue();
+                Log.d("GameHandler", "diceComp is "+diceComp);
+                if (diceComp == value.getValue()) {
+                    points += value.getValue();
+                    diceComp = 0;
+                }
+            }
+            if (!diceCopy.isEmpty()) {
+
+            }
         }
+
+        mPoints.put(value, points);
+        Log.d("GameHandler", "Points received: "+points);
     }
 
     private int calculateLow() {

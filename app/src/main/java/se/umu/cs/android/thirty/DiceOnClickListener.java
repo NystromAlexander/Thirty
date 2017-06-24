@@ -23,5 +23,6 @@ public class DiceOnClickListener implements View.OnClickListener {
         ImageButton die = (ImageButton) v;
         mGameHandler.setSavedDie(mDieNr);
         die.setBackgroundResource(mGameHandler.getDieImage(mDieNr));
+        mGameHandler.choseDie(mDieNr);
     }
 }
