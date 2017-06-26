@@ -75,12 +75,22 @@ public class GameHandler {
         return mPoints;
     }
 
-    public void endTurn(PointOptions chosenOption) {
+    public int endTurn(PointOptions chosenOption) {
         calculatePoints(chosenOption);
         mCurrentTurn++;
         mDice.forEach(dice -> {if (dice.isSaved())dice.setSaved();});
         mCurrentThrow = 0;
         mChosenDice.clear();
+
+        return mPoints.get(chosenOption);
+    }
+
+    public void resetGame() {
+        mCurrentTurn = 0;
+        mPoints.clear();
+        mCurrentThrow = 0;
+        mChosenDice.clear();
+        mDice.forEach(dice -> {if (dice.isSaved())dice.setSaved();});
     }
 
     public boolean isGameFinished() {
