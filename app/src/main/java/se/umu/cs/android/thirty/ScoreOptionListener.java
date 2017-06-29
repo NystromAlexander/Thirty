@@ -12,13 +12,13 @@ import android.widget.Toast;
 public class ScoreOptionListener implements View.OnClickListener {
     private PointOptions mOption;
     private GameHandler mGameHandler;
-    private Game mGame;
+    private GameFragment mGameFragment;
     private int mButtonNr;
 
-    public ScoreOptionListener(PointOptions option, GameHandler gameHandler, Game game, int number) {
+    public ScoreOptionListener(PointOptions option, GameHandler gameHandler, GameFragment gameFragment, int number) {
         mOption = option;
         mGameHandler = gameHandler;
-        mGame = game;
+        mGameFragment = gameFragment;
         mButtonNr = number;
     }
 
@@ -32,17 +32,17 @@ public class ScoreOptionListener implements View.OnClickListener {
     public void onClick(View v) {
         if (mGameHandler.getCurrentThrow() != 0) {
             if (mGameHandler.nrSelectedDice() < 1) {
-                Toast.makeText(mGame, "You have not selected any dice", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mGameFragment.getActivity(), "You have not selected any dice", Toast.LENGTH_SHORT).show();
                 return;
             }
             int receivedPoints = mGameHandler.endTurn(mOption);
-            Toast.makeText(mGame, "You received: " + receivedPoints + " points", Toast.LENGTH_SHORT)
+            Toast.makeText(mGameFragment.getActivity(), "You received: " + receivedPoints + " points", Toast.LENGTH_SHORT)
                     .show();
             Button pointButton = (Button) v;
             pointButton.setEnabled(false);
-            mGame.setButtonUsed(mButtonNr);
+            mGameFragment.setButtonUsed(mButtonNr);
             if (mGameHandler.isGameFinished()) {
-                mGame.endGame();
+                mGameFragment.endGame();
             }
         }
     }

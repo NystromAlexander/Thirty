@@ -15,4 +15,28 @@
 
     <string name="point_header">Points given for each option</string>
     <string name="point_total">Total points:</string>
+
+    <string name="rules_instructions">How to play</string>
+    <string name="old_rules">The game is ten rounds
+        long and you have three throws each round. You may save dice that should not be rolled
+        the next throw, to save a die you press it and it will be marked grey.\n
+        You have ten different score options to choose from, you may
+        choose one score option each round and after an option has been
+        selected it can not be selected again that game. \n\n
+        The scoring works as such that the dice you have selected must
+        sum up to the chosen value and will grant that value as points, for example if you have
+        marked the dice 5, 4, 5, 4, 3, 6, and you choose Nine(9) you will be granted 27 points. \n\n
+        NOTE! When a die is saved it will also be marked for scoring,
+        the game will count the dice in the order you have selected them so make sure to
+        select the dice in correct order.
+        </string>
+    <string name="score_instructions">How the scoring works</string>
+    <string name="rules">To score you have to select the dice that you want and then choose the
+        appropriate score option. \n\nFor example if you have
+        marked the dice 5, 4, 5, 4, 3, 6, and you choose Nine(9) you will be granted 27 points. \n\n
+        NOTE!\n When a die is saved (marked grey) it will also be marked for scoring.\n
+        The game will count the dice in the order you have selected them so make sure to
+        select the dice in correct order.
+    </string>
+    <string name="start_game">Play</string>
 </resources>

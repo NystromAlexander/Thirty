@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="se.umu.cs.android.thirty.RulesFragment"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="@string/score_instructions"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rules"/>
+    <Button
+        android:id="@+id/start_button"
+        android:layout_marginEnd="5dp"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_game"/>
+
+</LinearLayout>
