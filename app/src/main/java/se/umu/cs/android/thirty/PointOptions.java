@@ -1,7 +1,8 @@
 package se.umu.cs.android.thirty;
 
 /**
- * Created by dv15anm on 2017-06-19.
+ * Enumerator representing the different score options and keeps track of the
+ * values for each option.
  */
 
 public enum PointOptions {

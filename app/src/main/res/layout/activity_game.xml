@@ -17,7 +17,8 @@
             android:id="@+id/die1_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
             android:background="@drawable/white1"/>
         <ImageButton
             android:id="@+id/die2_button"
@@ -61,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,21 +97,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp">
             <Button
                 android:id="@+id/eight_button"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/points_eight"/>
             <Button
                 android:id="@+id/nine_button"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/points_nine"/>
             <Button
                 android:id="@+id/ten_button"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/points_ten"/>
             <Button
@@ -126,12 +127,15 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/throw_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/dice_roll"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/throw_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/dice_roll"/>
+
 </LinearLayout>

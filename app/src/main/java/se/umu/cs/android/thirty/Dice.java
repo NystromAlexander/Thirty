@@ -2,6 +2,10 @@ package se.umu.cs.android.thirty;
 
 import android.util.Log;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Random;
 
 /**
@@ -9,7 +13,7 @@ import java.util.Random;
  * die won't be rolled.
  */
 
-public class Dice {
+public class Dice implements Serializable {
     private int mCurrentValue;
     private boolean mIsSaved;
 
@@ -18,24 +22,42 @@ public class Dice {
         mIsSaved = false;
     }
 
+    /**
+     * Will roll the die if it's not saved.
+     */
     public void rollDie() {
         if (!mIsSaved) {
             mCurrentValue = new Random().nextInt(6) + 1;
         }
     }
 
+    /**
+     *
+     * @return The value of the die
+     */
     public int getCurrentValue() {
         return mCurrentValue;
     }
 
+    /**
+     *
+     * @return True if the die is saved, else false
+     */
     public boolean isSaved() {
         return mIsSaved;
     }
 
+    /**
+     * Toggles the die as saved or not saved.
+     */
     public void setSaved() {
         mIsSaved = !mIsSaved;
     }
 
+    /**
+     *
+     * @return The id with the image corresponding to the dies state.
+     */
     public int getImage() {
         switch (mCurrentValue) {
             case 1:
@@ -52,6 +74,30 @@ public class Dice {
                 return mIsSaved ? R.drawable.grey6 : R.drawable.white6;
             default:
                 return 0;
+        }
+    }
+
+    /**
+     * Required for the die to be serializable
+     * @param aInputStream
+     */
+    private void readObject(ObjectInputStream aInputStream) {
+        try {
+            aInputStream.defaultReadObject();
+        } catch (ClassNotFoundException | IOException e) {
+            Log.e("Dice", "readObject caused exception", e);
+        }
+    }
+
+    /**
+     * Required for the die to be serializable
+     * @param aOutputStream
+     */
+    private void writeObject(ObjectOutputStream aOutputStream) {
+        try {
+            aOutputStream.defaultWriteObject();
+        } catch (IOException e) {
+            Log.e("Dice", "Write Object caused exception", e);
         }
     }
 }

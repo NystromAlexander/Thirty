@@ -37,72 +37,84 @@
             android:layout_height="wrap_content"
 
             android:background="@drawable/white5"/>
+
         <ImageButton
             android:id="@+id/die6_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/white6"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp"
         android:layout_gravity="center"
-        android:gravity="">
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/low_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_low"/>
+
             <Button
                 android:id="@+id/four_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_four"/>
+
             <Button
                 android:id="@+id/five_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_five"/>
+
             <Button
                 android:id="@+id/six_button"
-                android:layout_width="wrap_content"
+                android:layout_width="104dp"
                 android:layout_height="wrap_content"
                 android:text="@string/points_six"/>
+
             <Button
                 android:id="@+id/seven_button"
-                android:layout_width="wrap_content"
+                android:layout_width="108dp"
                 android:layout_height="wrap_content"
                 android:text="@string/points_seven"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/eight_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_eight"/>
+
             <Button
                 android:id="@+id/nine_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_nine"/>
+
             <Button
                 android:id="@+id/ten_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_ten"/>
+
             <Button
                 android:id="@+id/eleven_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/points_eleven"/>
+
             <Button
                 android:id="@+id/twelve_button"
                 android:layout_width="wrap_content"
@@ -110,12 +122,14 @@
                 android:text="@string/points_twelve"/>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/throw_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="@string/dice_roll"/>
     </LinearLayout>
-    <Button
-        android:id="@+id/throw_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="@string/dice_roll"/>
+
 </LinearLayout>
