@@ -6,8 +6,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * This is the activity that will host the start fragment and the game fragment
+ */
 public class GameActivity extends AppCompatActivity implements FragmentChangeListener {
 
+    /**
+     * Start the activity and if there is no fragment set the rules fragment as active fragment.
+     * @param savedInstanceState If there is a saved state the data will be store in this.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +29,10 @@ public class GameActivity extends AppCompatActivity implements FragmentChangeLis
         }
     }
 
+    /**
+     * This method makes it possible to switch the fragment currently hosted in the activity.
+     * @param fragment The new fragment to get hosted.
+     */
     @Override
     public void replaceFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();

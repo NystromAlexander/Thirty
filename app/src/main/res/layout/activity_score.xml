@@ -23,8 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="60dp"
-                android:layout_marginRight="60dp"
+                android:layout_marginEnd="57dp"
                 android:text="@string/points_low"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -33,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text=" 0"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -43,9 +42,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginEnd="37dp"
-                android:layout_marginRight="37dp"
+                android:layout_gravity="start"
+                android:layout_marginEnd="33dp"
                 android:text="@string/points_four"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -53,8 +51,7 @@
                 android:id="@+id/four_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -64,8 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginEnd="36dp"
                 android:text="@string/points_five"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -73,8 +69,7 @@
                 android:id="@+id/five_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -84,8 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="46dp"
-                android:layout_marginRight="46dp"
+                android:layout_marginEnd="43dp"
                 android:text="@string/points_six"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -93,8 +87,7 @@
                 android:id="@+id/six_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -104,8 +97,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="25dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginEnd="24dp"
                 android:text="@string/points_seven"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -113,8 +105,8 @@
                 android:id="@+id/seven_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:layout_gravity="end"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -124,8 +116,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
+                android:layout_marginEnd="29dp"
                 android:text="@string/points_eight"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -133,8 +124,8 @@
                 android:id="@+id/eight_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:layout_gravity="end"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -144,8 +135,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="37dp"
-                android:layout_marginRight="37dp"
+                android:layout_marginEnd="33dp"
                 android:text="@string/points_nine"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -153,8 +143,8 @@
                 android:id="@+id/nine_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:layout_gravity="end"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -164,8 +154,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="31dp"
-                android:layout_marginRight="31dp"
+                android:layout_marginEnd="30dp"
                 android:text="@string/points_ten"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -173,8 +162,8 @@
                 android:id="@+id/ten_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:layout_gravity="end"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -184,8 +173,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="13dp"
                 android:text="@string/points_eleven"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -193,8 +181,8 @@
                 android:id="@+id/eleven_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text=" 0"
+                android:layout_gravity="end"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
         <LinearLayout
@@ -205,7 +193,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
                 android:text="@string/points_twelve"
                 android:textColor="?android:attr/textColorPrimary"/>
 
@@ -213,7 +200,7 @@
                 android:id="@+id/twelve_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 0"
+                android:text="@string/default_score"
                 android:textColor="?android:attr/textColorPrimary"/>
         </LinearLayout>
     </LinearLayout>
@@ -228,7 +215,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
             android:text="@string/point_total"
             android:textColor="?android:attr/textColorPrimary"/>
 
@@ -237,7 +223,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text=" 0"
+            android:text="@string/default_score"
             android:textColor="?android:attr/textColorPrimary"/>
     </LinearLayout>
 

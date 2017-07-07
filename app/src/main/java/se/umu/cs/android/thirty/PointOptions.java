@@ -19,7 +19,7 @@ public enum PointOptions {
 
     private final int value;
 
-    private PointOptions(int value) {
+    PointOptions(int value) {
         this.value = value;
     }
 

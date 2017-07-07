@@ -20,7 +20,7 @@ public class DiceOnClickListener implements View.OnClickListener {
     /**
      * When a dice button is clicked it will toggle the dice as saved, and update the image
      * corresponding to that state
-     * @param v
+     * @param v The button that got clicked
      */
     @Override
     public void onClick(View v) {

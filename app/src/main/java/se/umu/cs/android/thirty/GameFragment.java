@@ -31,9 +31,18 @@ public class GameFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    /**
+     * Set up the UI and if there is a saved state restore that state to the fragment and the
+     * GameHandler.
+     * @param inflater Used to inflate the UI elements.
+     * @param container The container that will host the fragment.
+     * @param savedInstanceState Contains the saved data of the fragment
+     * @return The finished view.
+     */
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,
+                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_game,container,false);
 
         mGameHandler = new GameHandler();
@@ -60,16 +69,23 @@ public class GameFragment extends Fragment {
         return view;
     }
 
+    /**
+     * When the fragment is resumed update the buttons to make sure they are in the correct state.
+     */
     @Override
     public void onResume() {
         super.onResume();
         updateButtons();
     }
 
+    /**
+     * Saves the current state of the fragment, also saves the state of the game.
+     * @param outState Contains the stored data.
+     */
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        mGameHandler.saveState(outState);
+        outState = mGameHandler.saveState(outState);
         outState.putBooleanArray(SAVED_ACTIVE_BUTTONS, mActiveButtons);
     }
 
@@ -134,34 +150,44 @@ public class GameFragment extends Fragment {
     private void initializePointButtons(View view) {
         mPointButtons = new ArrayList<>();
         Button lowButton = (Button) view.findViewById(R.id.low_button);
-        lowButton.setOnClickListener(new ScoreOptionListener(PointOptions.LOW, mGameHandler, this, 0));
+        lowButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.LOW, mGameHandler, this, 0));
         mPointButtons.add(lowButton);
         Button fourButton = (Button) view.findViewById(R.id.four_button);
-        fourButton.setOnClickListener(new ScoreOptionListener(PointOptions.FOUR, mGameHandler, this, 1));
+        fourButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.FOUR, mGameHandler, this, 1));
         mPointButtons.add(fourButton);
         Button fiveButton = (Button) view.findViewById(R.id.five_button);
-        fiveButton.setOnClickListener(new ScoreOptionListener(PointOptions.FIVE, mGameHandler, this, 2));
+        fiveButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.FIVE, mGameHandler, this, 2));
         mPointButtons.add(fiveButton);
         Button sixButton = (Button) view.findViewById(R.id.six_button);
-        sixButton.setOnClickListener(new ScoreOptionListener(PointOptions.SIX, mGameHandler, this, 3));
+        sixButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.SIX, mGameHandler, this, 3));
         mPointButtons.add(sixButton);
         Button sevenButton = (Button) view.findViewById(R.id.seven_button);
-        sevenButton.setOnClickListener(new ScoreOptionListener(PointOptions.SEVEN, mGameHandler, this, 4));
+        sevenButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.SEVEN, mGameHandler, this, 4));
         mPointButtons.add(sevenButton);
         Button eightButton = (Button) view.findViewById(R.id.eight_button);
-        eightButton.setOnClickListener(new ScoreOptionListener(PointOptions.EIGHT, mGameHandler, this, 5));
+        eightButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.EIGHT, mGameHandler, this, 5));
         mPointButtons.add(eightButton);
         Button nineButton = (Button) view.findViewById(R.id.nine_button);
-        nineButton.setOnClickListener(new ScoreOptionListener(PointOptions.NINE, mGameHandler, this, 6));
+        nineButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.NINE, mGameHandler, this, 6));
         mPointButtons.add(nineButton);
         Button tenButton = (Button) view.findViewById(R.id.ten_button);
-        tenButton.setOnClickListener(new ScoreOptionListener(PointOptions.TEN, mGameHandler, this, 7));
+        tenButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.TEN, mGameHandler, this, 7));
         mPointButtons.add(tenButton);
         Button elevenButton = (Button) view.findViewById(R.id.eleven_button);
-        elevenButton.setOnClickListener(new ScoreOptionListener(PointOptions.ELEVEN, mGameHandler, this, 8));
+        elevenButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.ELEVEN, mGameHandler, this, 8));
         mPointButtons.add(elevenButton);
         Button twelveButton = (Button) view.findViewById(R.id.twelve_button);
-        twelveButton.setOnClickListener(new ScoreOptionListener(PointOptions.TWELVE, mGameHandler, this, 9));
+        twelveButton.setOnClickListener(
+                new ScoreOptionListener(PointOptions.TWELVE, mGameHandler, this, 9));
         mPointButtons.add(twelveButton);
 
         for(int i = 0; i < POINT_BUTTON_NR; i++) {

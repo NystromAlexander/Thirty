@@ -79,7 +79,7 @@ public class Dice implements Serializable {
 
     /**
      * Required for the die to be serializable
-     * @param aInputStream
+     * @param aInputStream The data to restore object
      */
     private void readObject(ObjectInputStream aInputStream) {
         try {
@@ -91,7 +91,7 @@ public class Dice implements Serializable {
 
     /**
      * Required for the die to be serializable
-     * @param aOutputStream
+     * @param aOutputStream The data to be stored from this object
      */
     private void writeObject(ObjectOutputStream aOutputStream) {
         try {

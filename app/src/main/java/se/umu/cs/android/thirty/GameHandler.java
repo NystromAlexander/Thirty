@@ -1,8 +1,6 @@
 package se.umu.cs.android.thirty;
 
 import android.os.Bundle;
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -182,7 +180,10 @@ public class GameHandler {
     /**
      * Takes a bundle and restores the game to the state that was saved in the bundle
      * @param bundle the information stored in saveState
+     *
+     * The unchecked warning is suppressed since we know the objects are of the correct type
      */
+    @SuppressWarnings("unchecked")
     public void restoreState(Bundle bundle) {
         mDice = (ArrayList<Dice>) bundle.getSerializable(SAVED_DICE);
         mChosenDice = (ArrayList<Dice>) bundle.getSerializable(SAVED_CHOSEN_DICE);

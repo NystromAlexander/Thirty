@@ -8,37 +8,37 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center">
         <ImageButton
+            android:contentDescription="@string/description_dice"
             android:id="@+id/die1_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@drawable/white1"/>
         <ImageButton
+            android:contentDescription="@string/description_dice"
             android:id="@+id/die2_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@drawable/white2"/>
         <ImageButton
+            android:contentDescription="@string/description_dice"
             android:id="@+id/die3_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@drawable/white3"/>
         <ImageButton
+            android:contentDescription="@string/description_dice"
             android:id="@+id/die4_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@drawable/white4"/>
         <ImageButton
+            android:contentDescription="@string/description_dice"
             android:id="@+id/die5_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@drawable/white5"/>
-
         <ImageButton
+            android:contentDescription="@string/description_dice"
             android:id="@+id/die6_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

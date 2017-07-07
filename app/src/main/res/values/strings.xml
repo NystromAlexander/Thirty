@@ -13,7 +13,10 @@
     <string name="points_twelve">Twelve (12)</string>
     <string name="dice_roll">Throw</string>
 
+    <string name="description_dice">This represents a die</string>
+
     <string name="point_header">Points given for each option</string>
+    <string name="default_score">0</string>
     <string name="point_total">Total points:</string>
 
     <string name="rules_instructions">How to play</string>

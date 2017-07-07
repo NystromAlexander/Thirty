@@ -3,9 +3,9 @@ package se.umu.cs.android.thirty;
 import android.support.v4.app.Fragment;
 
 /**
- * Created by dv15anm on 2017-06-29.
+ * This interface is used to allow fragments to switch fragment in their host activity.
  */
 
 public interface FragmentChangeListener {
-    public void replaceFragment(Fragment fragment);
+    void replaceFragment(Fragment fragment);
 }

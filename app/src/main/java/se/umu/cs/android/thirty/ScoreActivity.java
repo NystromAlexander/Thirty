@@ -29,7 +29,16 @@ public class ScoreActivity extends AppCompatActivity {
     private TextView twelveScore;
     private TextView totalScore;
 
+    /**
+     * Initializes the UI of the score activity.
+     *
+     * @param savedInstanceState if the activity gets re-created the bundle will contain saved
+     *                           data.
+     *
+     * The unchecked warning is suppressed since we know the objects are of the correct type.
+     */
     @Override
+    @SuppressWarnings("unchecked")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
